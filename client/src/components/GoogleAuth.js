@@ -19,7 +19,7 @@ class GoogleAuth extends React.Component {
 
     onAuthChange = (isSignedIn) => { //arrow function because this will be a callback func, so as to not rebind 'this' keyword
         if (isSignedIn) {
-            this.props.signIn();
+            this.props.signIn(this.auth.currentUser.get().getId()); //argument gets google id number of user who is signing in. currentUser.get().getId() are google auth obj methods to get google id  
         } else {
             this.props.signOut();
         }
