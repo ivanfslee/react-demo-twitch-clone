@@ -1,5 +1,7 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form'; //reduxForm is like connect function, Field is a component
+import { connect } from 'react-redux';
+import { createStream } from '../../actions';
 
 class StreamCreate extends React.Component {
     renderError({ error, touched }) {
@@ -26,9 +28,11 @@ class StreamCreate extends React.Component {
         );
     }
 
-    onSubmit(formValues) {
+    //if user input into form is valid - onSubmit will run , that will run createStream action creator which will make an axios post request to api server 
+    onSubmit = formValues => {
         //event.preventDefault();
         console.log(formValues);
+        this.props.createStream(formValues);
     }
 
     render() {
@@ -58,7 +62,10 @@ const validate = (formValues) => { //formValues contains all the values inside o
     return errors;
 };
 
-export default reduxForm({ 
+const formWrapped = reduxForm({ 
     form: 'streamCreate', 
     validate: validate 
 })(StreamCreate);
+
+
+export default connect(null, { createStream })(formWrapped);
