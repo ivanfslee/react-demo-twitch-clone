@@ -1,3 +1,35 @@
 {
-  "streams": []
+  "streams": [
+    {
+      "title": "stream test 1",
+      "description": "stream description 1",
+      "id": 1
+    },
+    {
+      "title": "test",
+      "description": "test2",
+      "id": 2
+    },
+    {
+      "title": "test3",
+      "description": "test 4",
+      "id": 3
+    },
+    {
+      "title": "test5",
+      "description": "test6",
+      "id": 4
+    },
+    {
+      "title": "new stream grmmmmz",
+      "description": "what up~~~",
+      "id": 5
+    },
+    {
+      "title": "i created this stream",
+      "description": "this was made by me",
+      "userId": "109245182740562682955",
+      "id": 6
+    }
+  ]
 }

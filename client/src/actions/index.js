@@ -24,8 +24,9 @@ export const signOut = () => {
 };
 
 //making a post request to our api server via axios 
-export const createStream = formValues => async dispatch => {
-    const response = await streams.post('/streams', formValues); 
+export const createStream = formValues => async (dispatch, getState) => {
+    const { userId } = getState().auth; //get userId from auth object 
+    const response = await streams.post('/streams', { ...formValues, userId }); 
     
     //dispatch a CREATE_STREAM action with response data from api server
     dispatch({ type: CREATE_STREAM, payload: response.data });
