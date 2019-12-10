@@ -7,13 +7,12 @@ class StreamList extends React.Component { //class based component because we ne
     componentDidMount() {
         this.props.fetchStreams();
     }
+
     renderAdmin(stream) { //controls whether edit/delete buttons show up 
         if (stream.userId === this.props.currentUserId) {
             return (
                 <div className="right floated content">
-                    <button className="ui button primary">
-                        Edit
-                    </button>
+                    <Link  to={`/streams/edit/${stream.id}`} className="ui button primary">Edit</Link>
                     <button className="ui button negative">
                         Delete
                     </button>
