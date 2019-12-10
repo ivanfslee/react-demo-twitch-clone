@@ -10,6 +10,18 @@
       "description": "this was made by me",
       "userId": "109245182740562682955",
       "id": 6
+    },
+    {
+      "title": "test @ work",
+      "description": "test description ",
+      "userId": "109245182740562682955",
+      "id": 7
+    },
+    {
+      "title": "test after refactor streamCreate",
+      "description": "patch request",
+      "userId": "109245182740562682955",
+      "id": 8
     }
   ]
-}  
+}
