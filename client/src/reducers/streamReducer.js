@@ -17,7 +17,7 @@ export default (state = {}, action) => {
         case CREATE_STREAM:
             return { ...state, [action.payload.id]: action.payload }
         case EDIT_STREAM:
-            return { ...state, [action.payload.is]: action.payload }
+            return { ...state, [action.payload.id]: action.payload }
         case DELETE_STREAM:
             return _.omit(state, action.payload); //omit method from lodash creates a new obj with all properties from original state except action.payload property (which is an id)
         default: 
