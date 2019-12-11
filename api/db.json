@@ -6,22 +6,10 @@
       "id": 1
     },
     {
-      "title": "i created this stream",
-      "description": "this was made by me",
-      "userId": "109245182740562682955",
-      "id": 6
-    },
-    {
-      "title": "test @ work",
-      "description": "test description ",
+      "title": "test delete",
+      "description": "delete at work",
       "userId": "109245182740562682955",
       "id": 7
-    },
-    {
-      "title": "test after refactor streamCreate",
-      "description": "patch in it ",
-      "userId": "109245182740562682955",
-      "id": 8
     }
   ]
 }
